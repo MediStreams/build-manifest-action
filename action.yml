@@ -12,6 +12,9 @@ inputs:
   outputFile:
     required: false
     default: "manifest.json"
+  jiraKeys:
+    required: false
+    default: ""
 output:
   manifestFile:
     description: "Path to manifest file"

@@ -8,6 +8,7 @@ const commitSHA = core.getInput("commitSHA")
 const outputFile = core.getInput("outputFile") || "manifest.json"
 const buildId = core.getInput("buildId") || Date.now().toString()
 const deploymentId = Date.now().toString()
+const jiraKeys = core.getInput("jiraKeys") || ""
 
 let manifest = {
     artifact: {
@@ -17,7 +18,8 @@ let manifest = {
     },
     commitSHA: commitSHA,
     buildId: buildId,
-    deploymentId: deploymentId
+    deploymentId: deploymentId,
+    jiraKeys: jiraKeys
 }
 
 let data = JSON.stringify(manifest)
